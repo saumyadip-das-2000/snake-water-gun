@@ -1,0 +1,16 @@
+import random
+n=1
+wins=0
+options=['s','w','g']
+while n<=10:
+      mychoice=input('Type s for snake,w for water,g for gun:\n')
+      pc_choice=random.choice(options)
+      if (mychoice=='s'and pc_choice=='w') or (mychoice=='w' and pc_choice=='g') or (mychoice=='g' and pc_choice=='s'):
+            print('You won')
+            wins+=1
+      elif (mychoice=='s'and pc_choice=='s') or (mychoice=='w' and pc_choice=='w') or (mychoice=='g' and pc_choice=='g'): 
+           print('Tied')
+      else:   
+            print('You lost')
+      n+=1     
+print('You won',wins,'times')
